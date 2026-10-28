@@ -123,6 +123,7 @@ Userspace proxies, control libraries, port forwarders and other building blocks.
 - [onetun](https://github.com/aramperes/onetun) - User-space WireGuard port forwarder: reach ports on peers without installing WireGuard locally.
 - [sandialabs/wiretap](https://github.com/sandialabs/wiretap) - Transparent, VPN-like proxy server that tunnels traffic via WireGuard and needs no special privileges.
 - [tun2socks](https://github.com/xjasonlyu/tun2socks) - Forwards traffic from a TUN device to a proxy, built on the gVisor TCP/IP stack.
+- [wireguard-tools](https://github.com/WireGuard/wireguard-tools) - Official command-line tools wg and wg-quick (GitHub mirror).
 - [wireproxy](https://github.com/octeep/wireproxy) - A userspace WireGuard client that connects to a WireGuard peer, and exposes a SOCKS5 proxy.
 
 ## Desktop clients
