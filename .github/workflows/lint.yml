@@ -17,3 +17,4 @@ jobs:
         with:
           node-version: 22
       - run: npx --yes awesome-lint
+      - run: node --test .github/scripts/validate-pr.test.mjs

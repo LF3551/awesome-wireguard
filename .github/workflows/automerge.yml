@@ -1,0 +1,43 @@
+name: Entry check and auto-merge
+
+# pull_request_target runs this file from the default branch with a write token.
+# The pull request code is never checked out or executed; its README is only read as text through the API.
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  validate:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      REPO: ${{ github.repository }}
+      PR_NUMBER: ${{ github.event.pull_request.number }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate the entry
+        id: check
+        run: node .github/scripts/validate-pr.mjs
+      - name: Comment the result
+        run: gh pr comment "$PR_NUMBER" --repo "$REPO" --body-file report.md --edit-last --create-if-none
+      - name: Label the pull request
+        run: |
+          gh label create automerge-ready --repo "$REPO" --color 0E8A16 --force
+          gh label create needs-review --repo "$REPO" --color D93F0B --force
+          if [ "${{ steps.check.outputs.ok }}" = "true" ]; then
+            gh pr edit "$PR_NUMBER" --repo "$REPO" --add-label automerge-ready --remove-label needs-review
+          else
+            gh pr edit "$PR_NUMBER" --repo "$REPO" --add-label needs-review --remove-label automerge-ready
+          fi
+      - name: Enable auto-merge
+        if: steps.check.outputs.ok == 'true'
+        run: gh pr merge "$PR_NUMBER" --repo "$REPO" --auto --squash
