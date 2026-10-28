@@ -34,11 +34,22 @@ function lineDiff(base, head) {
   return { added, removed };
 }
 
+function patchLines(patch) {
+  const added = [];
+  const removed = [];
+  for (const l of patch.split('\n')) {
+    if (l.startsWith('+')) added.push(l.slice(1));
+    else if (l.startsWith('-')) removed.push(l.slice(1));
+  }
+  return { added, removed };
+}
+
 // Pure text checks. Returns { checks: [{ok, label}], entry }.
-export function analyze(base, head) {
+// `patch` is the PR's own diff against its merge base, so a branch that is behind main is not penalised.
+export function analyze(base, head, patch) {
   const checks = [];
   const add = (ok, label) => checks.push({ ok, label });
-  const { added, removed } = lineDiff(base, head);
+  const { added, removed } = patch === undefined ? lineDiff(base, head) : patchLines(patch);
   add(removed.length === 0 && added.length === 1, 'Exactly one line added and nothing removed or changed');
   const m = added.length === 1 ? added[0].match(ENTRY) : null;
   add(Boolean(m), 'Line uses the format `- [Name](https://url) - Description.`');
@@ -112,7 +123,7 @@ async function main() {
   if (checks[0].ok) {
     const base = await fileAt(REPO, pr.base.sha, 'README.md');
     const head = await fileAt(pr.head.repo.full_name, pr.head.sha, 'README.md');
-    const res = analyze(base, head);
+    const res = analyze(base, head, files[0].patch || '');
     checks.push(...res.checks);
     entry = res.entry;
   }

@@ -62,3 +62,10 @@ test('addition outside entry sections fails', () => {
   const r = analyze(base, withLine('- [Beta](https://github.com/b/beta) - Second client for Linux.', 2));
   assert.ok(!ok(r));
 });
+
+test('branch behind main passes when judged by its own patch', () => {
+  const line = '- [Beta](https://github.com/b/beta) - Second client for Linux.';
+  const newerBase = base.replace('## Deployment', '- [Delta](https://github.com/d/delta) - Fourth client.\n\n## Deployment');
+  const r = analyze(newerBase, withLine(line), `@@ -5,3 +5,4 @@\n+${line}`);
+  assert.ok(ok(r), failed(r).join('; '));
+});
