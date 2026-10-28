@@ -1,0 +1,30 @@
+name: Merge ready entries
+
+# Runs from the default branch after the lint check; merges only PRs that the entry check labeled automerge-ready.
+# GitHub still enforces the required checks, so a failing check blocks the merge.
+on:
+  workflow_run:
+    workflows: ["Awesome lint"]
+    types: [completed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  merge:
+    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'pull_request'
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      REPO: ${{ github.repository }}
+      SHA: ${{ github.event.workflow_run.head_sha }}
+    steps:
+      - name: Merge the labeled pull request
+        run: |
+          pr=$(gh pr list --repo "$REPO" --state open --label automerge-ready --search "$SHA" --json number,headRefOid --jq ".[] | select(.headRefOid == \"$SHA\") | .number" | head -n 1)
+          if [ -z "$pr" ]; then
+            echo "No labeled pull request for $SHA"
+            exit 0
+          fi
+          gh pr merge "$pr" --repo "$REPO" --squash || echo "Not mergeable yet; auto-merge will pick it up"
