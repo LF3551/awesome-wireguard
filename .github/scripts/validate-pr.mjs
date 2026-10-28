@@ -107,7 +107,7 @@ export async function repoChecks(entry, author) {
   add(!repo.archived, 'Repository is not archived');
   const monthsOld = (Date.now() - new Date(repo.pushed_at)) / (1000 * 60 * 60 * 24 * 30);
   add(monthsOld <= 12, 'Last commit is within 12 months');
-  add(repo.stargazers_count >= 5, 'Repository has at least 5 stars');
+  add(repo.stargazers_count >= 2, 'Repository has at least 2 stars');
   const user = await gh(`/users/${author}`);
   const ageDays = (Date.now() - new Date(user.created_at)) / (1000 * 60 * 60 * 24);
   add(ageDays >= 30 || user.login.toLowerCase() === m[1].toLowerCase(), 'Author account is older than 30 days or owns the repository');
