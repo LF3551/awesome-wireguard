@@ -69,6 +69,7 @@ Tools that connect many devices into one private network and handle keys, NAT tr
 Add-ons, dashboards and integrations around Tailscale and its open-source control server Headscale.
 
 - [caddy-tailscale](https://github.com/tailscale/caddy-tailscale) - Caddy plugin that integrates Tailscale; experimental.
+- [golink](https://github.com/tailscale/golink) - Private shortlink service for your tailnet.
 - [Headplane](https://github.com/tale/headplane) - Feature-complete web UI for Headscale.
 - [Headscale UI](https://github.com/gurucomputing/headscale-ui) - Web frontend for the Headscale coordination server.
 - [tailscale-mcp](https://github.com/YawLabs/tailscale-mcp) - MCP server for managing a tailnet from AI assistants.
