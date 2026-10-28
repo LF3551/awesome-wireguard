@@ -1,0 +1,47 @@
+name: Suggest a project
+description: Suggest a WireGuard or Tailscale-related project, guide or talk
+title: "Add: "
+labels: ["suggestion"]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Link
+      description: Repository, website or article URL
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What does it do?
+      description: One or two sentences, factual, without marketing wording
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Best section
+      options:
+        - Mesh VPNs built on WireGuard
+        - Tailscale ecosystem
+        - Overlay and zero-trust networks beyond WireGuard
+        - Self-hosted servers and web UIs
+        - Installers and config generators
+        - Tools and libraries
+        - Desktop clients
+        - Deployment
+        - Implementations
+        - Services built on WireGuard
+        - Guides and articles
+        - Talks and videos
+        - Communities
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Checks
+      options:
+        - label: It has a commit within the last 12 months, or it is a guide that still works
+          required: true
+        - label: I am the author or work for the vendor (tick only if true)
