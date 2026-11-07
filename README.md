@@ -123,6 +123,7 @@ Userspace proxies, control libraries, port forwarders and other building blocks.
 - [nr-wg-mtu-finder](https://github.com/nitred/nr-wg-mtu-finder) - Finds optimal MTU values for a WireGuard server and peer to maximize transfer speed.
 - [onetun](https://github.com/aramperes/onetun) - User-space WireGuard port forwarder: reach ports on peers without installing WireGuard locally.
 - [sandialabs/wiretap](https://github.com/sandialabs/wiretap) - Transparent, VPN-like proxy server that tunnels traffic via WireGuard and needs no special privileges.
+- [Tether](https://github.com/viktor-svirsky/tether) - iOS app that runs a WireGuard server on the iPhone and shares its cellular data with laptops, tablets and routers as the phone's own traffic.
 - [tun2socks](https://github.com/xjasonlyu/tun2socks) - Forwards traffic from a TUN device to a proxy, built on the gVisor TCP/IP stack.
 - [wireguard-tools](https://github.com/WireGuard/wireguard-tools) - Official command-line tools wg and wg-quick (GitHub mirror).
 - [wireproxy](https://github.com/octeep/wireproxy) - A userspace WireGuard client that connects to a WireGuard peer, and exposes a SOCKS5 proxy.
