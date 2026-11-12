@@ -4,7 +4,7 @@ A curated, link-checked list of WireGuard and Tailscale tools: mesh VPNs such as
 
 [![Link check](https://github.com/LF3551/awesome-wireguard/actions/workflows/links.yml/badge.svg)](https://github.com/LF3551/awesome-wireguard/actions/workflows/links.yml)
 
-112 entries, each checked on 2026-10-28. Links are re-checked every week, and projects without a commit for 18 months move to a separate section.
+Links are re-checked every week, and projects without a commit for 18 months move to a separate section.
 
 [WireGuard](https://www.wireguard.com/) is a fast, modern VPN protocol built into the Linux kernel since version 5.6. It is a point-to-point tunnel: you create keys and configs yourself. Tools in this list add what plain WireGuard leaves out: web UIs, access control, NAT traversal and mesh networking.
 
@@ -72,8 +72,14 @@ Add-ons, dashboards and integrations around Tailscale and its open-source contro
 - [golink](https://github.com/tailscale/golink) - Private shortlink service for your tailnet.
 - [Headplane](https://github.com/tale/headplane) - Feature-complete web UI for Headscale.
 - [Headscale UI](https://github.com/gurucomputing/headscale-ui) - Web frontend for the Headscale coordination server.
+- [ionscale](https://github.com/jsiebens/ionscale) - Lightweight, self-hosted implementation of the Tailscale control server, an alternative to Headscale.
+- [Tailscale Kubernetes operator](https://tailscale.com/kb/1236/kubernetes-operator) - Exposes Kubernetes services to a tailnet and gives cluster workloads access to tailnet devices.
 - [tailscale-mcp](https://github.com/YawLabs/tailscale-mcp) - MCP server for managing a tailnet from AI assistants.
+- [tailscale-network-topology-mapper](https://github.com/SimplyMinimal/tailscale-network-topology-mapper) - Visualizes Tailscale ACL rules as an interactive network graph.
+- [tclip](https://github.com/tailscale-dev/tclip) - Pastebin from Tailscale that runs inside a tailnet.
 - [TSDProxy](https://github.com/almeidapaulopt/tsdproxy) - Automatic Tailscale reverse proxy for Docker containers, configured with labels.
+- [tsidp](https://github.com/tailscale/tsidp) - OpenID Connect identity provider that signs users in with their Tailscale identity.
+- [tsnet](https://tailscale.com/kb/1244/tsnet) - Go library for embedding a Tailscale node in a program, so it joins a tailnet as its own device.
 
 ## Overlay and zero-trust networks beyond WireGuard
 
@@ -120,6 +126,7 @@ Userspace proxies, control libraries, port forwarders and other building blocks.
 
 - [bitwister/twine](https://github.com/bitwister/twine) - Label-based route and port forwarding for Docker containers through a WireGuard container.
 - [coder/wush](https://github.com/coder/wush) - Transfers files between computers over WireGuard.
+- [libtailscale](https://github.com/tailscale/libtailscale) - C library for embedding a Tailscale node in applications written in other languages.
 - [nr-wg-mtu-finder](https://github.com/nitred/nr-wg-mtu-finder) - Finds optimal MTU values for a WireGuard server and peer to maximize transfer speed.
 - [onetun](https://github.com/aramperes/onetun) - User-space WireGuard port forwarder: reach ports on peers without installing WireGuard locally.
 - [sandialabs/wiretap](https://github.com/sandialabs/wiretap) - Transparent, VPN-like proxy server that tunnels traffic via WireGuard and needs no special privileges.
@@ -132,6 +139,7 @@ Userspace proxies, control libraries, port forwarders and other building blocks.
 
 Graphical clients and tray apps.
 
+- [Trayscale](https://github.com/DeedleFake/trayscale) - Unofficial GTK app for Linux that controls the Tailscale client from the desktop.
 - [TunnlTo/desktop-app](https://github.com/TunnlTo/desktop-app) - Lightweight WireGuard client for Windows built for split tunneling.
 - [wg-fleet](https://github.com/OTFRenji/wg-fleet) - Windows app that manages WireGuard peers across several VPS servers over SSH.
 - [WireGuardStatusbar](https://github.com/aequitas/macos-menubar-wireguard) - Menu bar icon for WireGuard and wg-quick on macOS.
@@ -144,8 +152,10 @@ Docker images, Ansible roles, Terraform and one-click setups.
 - [Algo VPN](https://github.com/trailofbits/algo) - Ansible scripts from Trail of Bits that set up a personal WireGuard and IPsec VPN in the cloud.
 - [ansible-role-wireguard](https://github.com/githubixx/ansible-role-wireguard) - Ansible role that installs WireGuard on Debian, Ubuntu, Fedora, CentOS and other Linux distributions.
 - [auto-vpn](https://github.com/g1ibby/auto-vpn) - Deploys on-demand, temporary WireGuard servers on VPS providers such as Vultr or Linode, with automated cleanup.
+- [fly-tailscale-exit](https://github.com/patte/fly-tailscale-exit) - Runs Tailscale exit nodes in many regions on Fly.io, deployed with GitHub Actions.
 - [linuxserver/docker-wireguard](https://github.com/linuxserver/docker-wireguard) - WireGuard container image from LinuxServer.io.
 - [masipcat/wireguard-go-docker](https://github.com/masipcat/wireguard-go-docker) - WireGuard Docker image.
+- [Tailscale GitHub Action](https://github.com/tailscale/github-action) - Connects a GitHub Actions runner to a tailnet so workflows can reach private hosts.
 - [WireHole](https://github.com/IAmStoxe/wirehole) - WireGuard, Pi-hole and Unbound in one Docker-compose project for a personal VPN with ad blocking.
 
 ## Implementations
@@ -209,6 +219,7 @@ No commits for more than 18 months. They may still work well; check before you d
 - [ciniml/WireGuard-ESP32-Arduino](https://github.com/ciniml/WireGuard-ESP32-Arduino) - WireGuard implementation for ESP32 Arduino in C. Last commit 2024-04.
 - [Cloudblock](https://github.com/chadgeary/cloudblock) - Terraform and Ansible deployment of WireGuard, Pi-hole and DNS over HTTPS, in a cloud provider or locally. Last commit 2024-07.
 - [docker-wireguard-socks-proxy](https://github.com/kizzx2/docker-wireguard-socks-proxy) - Expose a WireGuard tunnel as a SOCKS5 proxy. Last commit 2019-10.
+- [EmbarkStudios/wg-ui](https://github.com/EmbarkStudios/wg-ui) - WireGuard web UI for self-serve client configurations, with optional authentication. Archived; last commit 2023-03.
 - [guard](https://github.com/stellarproject/guard) - A gRPC server for managing wireguard tunnels. Last commit 2021-05.
 - [HarvsG/WireGuardMeshes](https://github.com/HarvsG/WireGuardMeshes) - Compare WireGuard mesh tools. Last commit 2024-12.
 - [LNVPN](https://github.com/LightRider5/lnvpn) - WireGuard VPN provider with Lightning-only, pay-as-you-go payments. Last commit 2025-03.
