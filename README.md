@@ -80,6 +80,7 @@ Add-ons, dashboards and integrations around Tailscale and its open-source contro
 - [TSDProxy](https://github.com/almeidapaulopt/tsdproxy) - Automatic Tailscale reverse proxy for Docker containers, configured with labels.
 - [tsidp](https://github.com/tailscale/tsidp) - OpenID Connect identity provider that signs users in with their Tailscale identity.
 - [tsnet](https://tailscale.com/kb/1244/tsnet) - Go library for embedding a Tailscale node in a program, so it joins a tailnet as its own device.
+- [unbraid](https://github.com/quiet-crafts/unbraid) - Android and macOS client that runs Tailscale alongside several WireGuard exits at once, so you can choose the exit for each app.
 
 ## Overlay and zero-trust networks beyond WireGuard
 
