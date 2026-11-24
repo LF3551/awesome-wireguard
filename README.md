@@ -175,6 +175,7 @@ The protocol outside the Linux kernel: userspace, other operating systems and em
 Commercial and free services that use WireGuard.
 
 - [Mullvad](https://github.com/mullvad/mullvadvpn-app) - Open-source VPN client for desktop and mobile; WireGuard is a supported protocol.
+- [Party VPN](https://partyvpn.com) - WireGuard and AmneziaWG VPN paid in cryptocurrency by the connected hour, with a REST API that creates VPNs and returns their configs.
 - [Warp](https://blog.cloudflare.com/1111-warp-better-vpn/) - Cloudflare announces WARP, a WireGuard-based consumer VPN.
 - [wgcf](https://github.com/ViRb3/wgcf) - Cross-platform, unofficial CLI for Cloudflare Warp.
 
