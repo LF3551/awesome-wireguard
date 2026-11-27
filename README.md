@@ -140,6 +140,7 @@ Userspace proxies, control libraries, port forwarders and other building blocks.
 
 Graphical clients and tray apps.
 
+- [Amnezia Monitor](https://github.com/freeon1989/amnezia-monitor/) - Read-only SSH dashboard for self-hosted AmneziaVPN and AmneziaWG servers, with a Windows app and Android/macOS companions.
 - [Trayscale](https://github.com/DeedleFake/trayscale) - Unofficial GTK app for Linux that controls the Tailscale client from the desktop.
 - [TunnlTo/desktop-app](https://github.com/TunnlTo/desktop-app) - Lightweight WireGuard client for Windows built for split tunneling.
 - [wg-fleet](https://github.com/OTFRenji/wg-fleet) - Windows app that manages WireGuard peers across several VPS servers over SSH.
