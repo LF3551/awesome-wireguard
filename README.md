@@ -112,6 +112,7 @@ Scripts and generators that write WireGuard configs, set up servers or give you 
 - [AndrianBdn/wg-cmd](https://github.com/AndrianBdn/wg-cmd) - Terminal UI for a simple WireGuard VPN setup, with QR codes and a setup wizard.
 - [angristan/WireGuard-install](https://github.com/angristan/wireguard-install) - WireGuard VPN installer for Linux servers.
 - [b-m-f/wired](https://github.com/b-m-f/wired) - WireGuard network configuration generator with support for multiple topologies, written in Rust.
+- [Cascade Control](https://github.com/freeon1989/CascadeControl/) - Local panel that installs an AmneziaWG and VLESS Reality cascade (entry, transit, exit) on your own VPS nodes, with automatic exit failover.
 - [dsnet](https://github.com/naggie/dsnet/) - Manages a centralised WireGuard VPN with key generation and address allocation.
 - [easy-wg-quick](https://github.com/burghardt/easy-wg-quick) - Creates Wireguard configuration for hub and peers with ease.
 - [Nyr/wireguard-install](https://github.com/Nyr/wireguard-install) - WireGuard road warrior installer for Ubuntu, Debian, CentOS and Fedora.
