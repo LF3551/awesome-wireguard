@@ -174,7 +174,9 @@ The protocol outside the Linux kernel: userspace, other operating systems and em
 
 Commercial and free services that use WireGuard.
 
+- [EasyGuard VPN](https://easyguard.app/) - Consumer VPN service with WireGuard-based apps for Windows, macOS, Android and iOS.
 - [Mullvad](https://github.com/mullvad/mullvadvpn-app) - Open-source VPN client for desktop and mobile; WireGuard is a supported protocol.
+- [Party VPN](https://partyvpn.com) - WireGuard and AmneziaWG VPN paid in cryptocurrency by the connected hour, with a REST API that creates VPNs and returns their configs.
 - [Warp](https://blog.cloudflare.com/1111-warp-better-vpn/) - Cloudflare announces WARP, a WireGuard-based consumer VPN.
 - [wgcf](https://github.com/ViRb3/wgcf) - Cross-platform, unofficial CLI for Cloudflare Warp.
 
@@ -226,7 +228,7 @@ No commits for more than 18 months. They may still work well; check before you d
 - [LNVPN](https://github.com/LightRider5/lnvpn) - WireGuard VPN provider with Lightning-only, pay-as-you-go payments. Last commit 2025-03.
 - [MindFlavor/prometheus_wireguard_exporter](https://github.com/MindFlavor/prometheus_wireguard_exporter) - A Prometheus exporter for WireGuard, very light on your server resources. Last commit 2023-10.
 - [MozWire](https://github.com/NilsIrl/MozWire) - Unofficial configuration manager for Mozilla VPN on Linux, macOS and other systems. Last commit 2025-01.
-- [muiquq/wgcfghelp](https://github.com/muqiuq/wgcfghelp) - Single-binary CLI for roadwarrior peer management, config, QR code and MikroTik command generation. Last commit 2024-09.
+- [muqiuq/wgcfghelp](https://github.com/muqiuq/wgcfghelp) - Single-binary CLI for roadwarrior peer management, config, QR code and MikroTik command generation. Last commit 2024-09.
 - [network-manager-wireguard](https://github.com/max-moser/network-manager-wireguard) - Network-Manager VPN Plugin for WireGuard. Last commit 2023-06.
 - [seashell/drago](https://github.com/seashell/drago) - Self-hosted configuration manager for secure network overlays across heterogeneous nodes, with a web UI. Last commit 2023-10.
 - [Subspace](https://github.com/subspacecommunity/subspace) - A simple WireGuard VPN server GUI. Last commit 2024-06.
