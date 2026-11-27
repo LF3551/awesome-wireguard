@@ -114,6 +114,7 @@ Scripts and generators that write WireGuard configs, set up servers or give you 
 - [b-m-f/wired](https://github.com/b-m-f/wired) - WireGuard network configuration generator with support for multiple topologies, written in Rust.
 - [dsnet](https://github.com/naggie/dsnet/) - Manages a centralised WireGuard VPN with key generation and address allocation.
 - [easy-wg-quick](https://github.com/burghardt/easy-wg-quick) - Creates Wireguard configuration for hub and peers with ease.
+- [NoctHost WireGuard config generator](https://nocthost.com/tools/wireguard-config-generator) - Browser-based generator for a server wg0.conf with NAT rules and up to 10 client configs, with keys created locally through the Web Crypto API.
 - [Nyr/wireguard-install](https://github.com/Nyr/wireguard-install) - WireGuard road warrior installer for Ubuntu, Debian, CentOS and Fedora.
 - [PiVPN](https://github.com/pivpn/pivpn) - VPN installer scripts designed for Raspberry Pi.
 - [psyhomb/wireguard-tools](https://github.com/psyhomb/wireguard-tools) - WireGuard helper scripts.
