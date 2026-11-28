@@ -186,6 +186,7 @@ Articles and tutorials that explain how WireGuard and Tailscale work in practice
 
 - [Decoding WireGuard with Wireshark](https://blog.salrashid.dev/articles/2022/wireguard_wireshark/) - A simple guide on how to inspect WireGuard packets in Wireshark.
 - [Getting Started with WireGuard](https://miguelmota.com/blog/getting-started-with-wireguard/) - Introductory walkthrough for setting up WireGuard.
+- [Headscale: run your own Tailscale control plane](https://www.grep.tips/articles/headscale) - Replace Tailscale's hosted control server with one you run yourself, keeping the official clients and the WireGuard mesh.
 - [How Tailscale works](https://tailscale.com/blog/how-tailscale-works) - Tailscale engineers explain NAT traversal, DERP relays and key distribution.
 - [How to access a peer's local network](https://iliasa.eu/wireguard-how-to-access-a-peers-local-network/) - Reach a peer's local network without configuring split tunneling.
 - [How to easily configure WireGuard](https://www.stavros.io/posts/how-to-configure-wireguard/) - Tutorial on configuring WireGuard peers and interfaces.
